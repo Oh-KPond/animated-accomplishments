@@ -24,17 +24,16 @@
         fullStyle: [
           `/*
 * Inspired by http://strml.net/
-* 大家好，我是方方 
-* 二月了，好多公司都在招聘，你是不是也在准备简历呀。
-* 说做就做，我也来写一份简历！
+* Hello there! My name is Kate. It's a pleasure to meet you! 
+* Today I'd like to build my resume for you.
 */
 
-/* 首先给所有元素加上过渡效果 */
+/* First we'll need to add a transition effect to all the elements */
 * {
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-/* 白色背景太单调了，我们来点背景 */
+/* I don't know about you, but I find the white backgroud a bit boring. Let's change that. */
 html {
   color: rgb(222,222,222); background: rgb(0,43,54); 
 }
