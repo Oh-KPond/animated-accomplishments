@@ -4,6 +4,12 @@
 
 [Preview](https://oh-kpond.github.io/animated-resume/dist/)
 
+
+
+## System Requirements
+---
+### Node - ``` >= v4.0 ```
+
 ## Instructions
 
 ``` bash
