@@ -7,8 +7,7 @@
 
 
 ## System Requirements
----
-### Node - ``` >= v4.0 ```
+**Node**  -  `>= v4.0` 
 
 ## Instructions
 
