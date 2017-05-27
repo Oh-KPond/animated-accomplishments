@@ -16,7 +16,7 @@ npm run dev
 ## Deployment method
 
 
-1. Edit config/index.js，modify the first 10 lines of assetsPublicPath，value is `item_name/dist`. If you have not modified the project name animated-resume，you can skip this step.
+1. Edit config/index.js，modify line 10 "assetsPublicPath"，where the value is `item_name/dist`. If you have not modified the project name animated-resume，you can skip this step.
 
 2. Compile, upload
     ``` bash
