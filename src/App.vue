@@ -23,9 +23,11 @@
         enableHtml: false,
         fullStyle: [
           `/*
-* Inspired by http://strml.net/
+* Inspired by http://strml.net/ & https://github.com/jirengu-inc/animating-resume
 * Hello there! My name is Kate. It's a pleasure to meet you! 
 * Today I'd like to build my resume for you.
+* If you ask me why, then I'd have to tell you,
+* I think it's fun!
 */
 
 /* First we'll need to add a transition effect to all the elements */
@@ -33,26 +35,35 @@
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-/* I don't know about you, but I find the white backgroud a bit boring. Let's change that. */
+/* Then I don't know about you, but 
+* I find the white backgroud a bit boring. Let's change that, shall we? */
 html {
-  color: rgb(222,222,222); background: rgb(0,43,54); 
+  color: #ececec;
+  background: #4b2650; 
 }
-/* 文字离边框太近了 */
+/* Now we'll need a bit of padding to move the text from the edge of the screen
+* And wouldn't a border be nice,
+* with some margin to keep the text from the edge of the border.
+*/
 .styleEditor {
   padding: .5em;
   border: 1px solid;
   margin: .5em;
   overflow: auto;
-  width: 45vw; height: 90vh;
+  width: 50vw; height: 90vh;
 }
-/* 代码高亮 */
-.token.selector{ color: rgb(133,153,0); }
-.token.property{ color: rgb(187,137,0); }
-.token.punctuation{ color: yellow; }
-.token.function{ color: rgb(42,161,152); }
+/* I think it would be nice to have the code highlighted as well */
+.token.selector { color: #ef41fe; }
+.token.property { color: #f1a9a0; }
+.token.punctuation { color: #dda0dd; }
+.token.function { color: #fffacd; }
 
-/* 加点 3D 效果呗 */
-html{
+/* Those colors were pickout using colorsafe.co
+* "Accessible text colors are generated with 
+* WCAG Guidelines recommend contrast ratio" 
+*
+* 加点 3D 效果呗 */
+html {
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
@@ -65,7 +76,7 @@ html{
 }
 
 /* 接下来我给自己准备一个编辑器 */
-.resumeEditor{
+.resumeEditor {
   position: fixed; right: 0; top: 0;
   padding: .5em;  margin: .5em;
   width: 48vw; height: 90vh; 
@@ -89,12 +100,12 @@ html{
 .resumeEditor{
   padding: 2em;
 }
-.resumeEditor h2{
+.resumeEditor h2 {
   display: inline-block;
   border-bottom: 1px solid;
   margin: 1em 0 .5em;
 }
-.resumeEditor ul,.resumeEditor ol{
+.resumeEditor ul,.resumeEditor ol {
   list-style: none;
 }
 .resumeEditor ul> li::before{
