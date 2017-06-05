@@ -134,13 +134,13 @@ Kate Pond
 
 Genius, Unicorn, Goddess, Gatekeeper of Unlimted Knowlege
 
-技能
+Skills
 ----
 
-* 前端开发
-* Rails 开发
-* Node.js 开发
-* 前端授课
+* Leadership
+* Interpersonal Communication
+* Event Planning 
+* Education
 
 工作经历
 ----
