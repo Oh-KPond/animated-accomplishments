@@ -24,7 +24,7 @@
         fullStyle: [
           `/*
 * Inspired by http://strml.net/ & https://github.com/jirengu-inc/animating-resume
-* Hello there! My name is Kate. It's a pleasure to meet you! 
+* Hello there! My name is Kate. It's a pleasure to e-meet you! 
 * Today I'd like to build my resume for you.
 * If you ask me why, then I'd have to tell you,
 * I think it's fun!
@@ -36,7 +36,7 @@
   transition: all .3s;
 }
 /* Then I don't know about you, but 
-* I find the white backgroud a bit boring. Let's change that, shall we? */
+* I find the white background a bit boring. Let's change that, shall we? */
 html {
   color: #ececec;
   background: #4b2650; 
@@ -62,29 +62,30 @@ html {
 * "Accessible text colors are generated with 
 * WCAG Guidelines recommend contrast ratio" 
 *
-* 加点 3D 效果呗 */
+* How about a little perspective now? */
 html {
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
+/* Here's some fun with that perspective.  */
 .styleEditor {
-  position: fixed; left: 0; top: 0; 
+  position: fixed; left: 10px; top: 0; 
   -webkit-transition: none; 
   transition: none;
   -webkit-transform: rotateY(10deg) translateZ(-100px) ;
           transform: rotateY(10deg) translateZ(-100px) ;
 }
 
-/* 接下来我给自己准备一个编辑器 */
+/* Now to make the space for my resume... */
 .resumeEditor {
   position: fixed; right: 0; top: 0;
   padding: .5em;  margin: .5em;
   width: 48vw; height: 90vh; 
-  border: 1px solid;
+  border: 3px solid #c5eff7;
   background: white; color: #222;
   overflow: auto;
 }
-/* 好了，我开始写简历了 */
+/* And actually write it! */
 
 
 `,
@@ -127,10 +128,11 @@ html {
 }
 `],
         currentMarkdown: '',
-        fullMarkdown: `方应杭
+        fullMarkdown: `
+Kate Pond
 ----
 
-资深前端工程师，资深前端讲师，现在在 [饥人谷](http://jirengu.com) 教前端课程。
+Genius, Unicorn, Goddess, Gatekeeper of Unlimted Knowlege
 
 技能
 ----
@@ -183,7 +185,7 @@ html {
           let showStyle = (async function () {
             let style = this.fullStyle[n]
             if (!style) { return }
-            // 计算前 n 个 style 的字符总数
+            // Calculate the total number of characters before the n styles
             let length = this.fullStyle.filter((_, index) => index <= n).map((item) => item.length).reduce((p, c) => p + c, 0)
             let prefixLength = length - style.length
             if (this.currentStyle.length < length) {
