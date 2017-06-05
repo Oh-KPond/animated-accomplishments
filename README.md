@@ -18,6 +18,8 @@ npm install
 npm run dev
 ```
 
+If local dev ```localhost:8080``` does not run in Chrome, try Firefox or another browser
+
 ## Deployment method
 
 
