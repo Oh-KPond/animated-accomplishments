@@ -24,9 +24,10 @@
         fullStyle: [
           `/*
 * Inspired by http://strml.net/ & https://github.com/jirengu-inc/animating-resume
+*
 * Hello there! My name is Kate. It's a pleasure to e-meet you! 
 * Today I'd like to build my resume for you.
-* If you ask me why, then I'd have to tell you,
+* If you ask me why, then I'd have to tell you...
 * I think it's fun!
 */
 
@@ -90,14 +91,14 @@ html {
 
 `,
           `
-/* 这个简历好像差点什么
- * 对了，这是 Markdown 格式的，我需要变成对 HR 更友好的格式
- * 简单，用开源工具翻译成 HTML 就行了
+/* This Markdown needs some style now.
+ * We'll accomplish this with some open source tools like 
+ * marked(https://www.npmjs.com/package/marked) and ??.
  */
 `
           ,
           `
-/* 再对 HTML 加点样式 */
+/* Here comes the styling... */
 .resumeEditor{
   padding: 2em;
 }
@@ -132,7 +133,7 @@ html {
 Kate Pond
 ----
 
-Genius, Unicorn, Goddess, Gatekeeper of Unlimted Knowlege
+Genius, Unicorn, Goddess, Gatekeeper of Unlimted Knowlege, Leader
 
 Skills
 ----
@@ -142,21 +143,22 @@ Skills
 * Event Planning 
 * Education
 
-工作经历
+Experience
 ----
 
-1. [饥人谷](http://jirengu.com)
-2. 腾讯即时通讯平台部
-3. 阿里巴巴B2B部门
-4. 彩程知人项目组
+1. Oranganized over 20 events and classes as a Girl Develop It Chapter Leader
+2. Supervisory Ranger for the Mountains Conservation and Recreation Area and Tongass National Forest
+3. Assisted in creating automation for tasks using Node and Gulp
+4. Given 100+ public talks on natural and cultural history
 
-链接
+Connect
 ----
 
-* [GitHub](https://github.com/frankfang)
-* [我的文章](https://www.zhihu.com/people/zhihusucks/pins/posts)
+* [GitHub](https://github.com/Oh-KPond)
+* [Medium](https://medium.com/@OhKPond)
+* [Twitter @OhKPond](https://twitter.com/OhKPond)
 
-> 如果你喜欢这个效果，Fork [我的项目](https://github.com/jirengu-inc/animated-resume)，打造你自己的简历！
+> To build your own animated resume，Fork [This Project](https://github.com/Oh-KPond/animated-resume)，and make it your own！
 
 `
       }
