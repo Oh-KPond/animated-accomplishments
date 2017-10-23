@@ -133,11 +133,15 @@ html {
 Kate Pond
 ----
 
-Genius, Unicorn, Goddess, Gatekeeper of Unlimted Knowlege, Leader
+Genius, Unicorn, Goddess, Gatekeeper of Unlimited Knowledge, Leader
 
 Skills
 ----
 
+* HTML & CSS
+* Node
+* gulp
+* HTML Email Development
 * Leadership
 * Interpersonal Communication
 * Event Planning 
@@ -146,10 +150,11 @@ Skills
 Experience
 ----
 
-1. Oranganized over 20 events and classes as a Girl Develop It Chapter Leader
-2. Supervisory Ranger for the Mountains Conservation and Recreation Area and Tongass National Forest
-3. Assisted in creating automation for tasks using Node and Gulp
-4. Given 100+ public talks on natural and cultural history
+1. Currently Tech Ladies Phoenix City Organizer & ACT-W National Confrence Co-coordinator
+2. Oranganized over 20 events and classes as a Girl Develop It Chapter Leader
+3. Supervisory Ranger for the Mountains Conservation and Recreation Area and Tongass National Forest
+4. Assisted in creating automation for tasks using Node and Gulp
+5. Given 100+ public talks on natural and cultural history
 
 Connect
 ----
