@@ -3,18 +3,18 @@ require('./check-versions')()
 
 process.env.NODE_ENV = 'production'
 
-var ora = require('ora')
-var path = require('path')
-var chalk = require('chalk')
-var shell = require('shelljs')
-var webpack = require('webpack')
-var config = require('../config')
-var webpackConfig = require('./webpack.prod.conf')
+let ora = require('ora')
+let path = require('path')
+let chalk = require('chalk')
+let shell = require('shelljs')
+let webpack = require('webpack')
+let config = require('../config')
+let webpackConfig = require('./webpack.prod.conf')
 
-var spinner = ora('building for production...')
+let spinner = ora('building for production...')
 spinner.start()
 
-var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
+let assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
 shell.rm('-rf', assetsPath)
 shell.mkdir('-p', assetsPath)
 shell.config.silent = true
