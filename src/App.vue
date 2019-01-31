@@ -25,7 +25,7 @@
           `/*
 * Inspired by http://strml.net/ & https://github.com/jirengu-inc/animating-resume
 *
-* Hello there! My name is Kate. It's a pleasure to e-meet you! 
+* Hello there! My name is Kate. It's a pleasure to e-meet you!
 * Today I'd like to build my resume for you.
 * If you ask me why, then I'd have to tell you...
 * I think it's fun!
@@ -36,11 +36,11 @@
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-/* Then I don't know about you, but 
+/* Then I don't know about you, but
 * I find the white background a bit boring. Let's change that, shall we? */
 html {
   color: #ececec;
-  background: #4b2650; 
+  background: #4b2650;
 }
 /* Now we'll need a bit of padding to move the text from the edge of the screen
 * And wouldn't a border be nice,
@@ -60,8 +60,8 @@ html {
 .token.function { color: #fffacd; }
 
 /* Those colors were pickout using colorsafe.co
-* "Accessible text colors are generated with 
-* WCAG Guidelines recommend contrast ratio" 
+* "Accessible text colors are generated with
+* WCAG Guidelines recommend contrast ratio"
 *
 * How about a little perspective now? */
 html {
@@ -70,8 +70,8 @@ html {
 }
 /* Here's some fun with that perspective.  */
 .styleEditor {
-  position: fixed; left: 10px; top: 0; 
-  -webkit-transition: none; 
+  position: fixed; left: 10px; top: 0;
+  -webkit-transition: none;
   transition: none;
   -webkit-transform: rotateY(10deg) translateZ(-100px) ;
           transform: rotateY(10deg) translateZ(-100px) ;
@@ -81,7 +81,7 @@ html {
 .resumeEditor {
   position: fixed; right: 0; top: 0;
   padding: .5em;  margin: .5em;
-  width: 48vw; height: 90vh; 
+  width: 48vw; height: 90vh;
   border: 3px solid #c5eff7;
   background: white; color: #222;
   overflow: auto;
@@ -92,8 +92,8 @@ html {
 `,
           `
 /* This Markdown needs some style now.
- * We'll accomplish this with some open source tools like 
- * marked(https://www.npmjs.com/package/marked) and ??.
+ * We'll accomplish this with some open source tools like
+ * marked(https://www.npmjs.com/package/marked).
  */
 `
           ,
@@ -118,8 +118,8 @@ html {
   counter-reset: section;
 }
 .resumeEditor ol li::before {
-  counter-increment: section;            
-  content: counters(section, ".") " ";  
+  counter-increment: section;
+  content: counters(section, ".") " ";
   margin-right: .5em;
 }
 .resumeEditor blockquote {
@@ -137,24 +137,34 @@ Genius, Unicorn, Goddess, Gatekeeper of Unlimited Knowledge, Leader
 
 Skills
 ----
+(Some of the things I love in no particular order)
 
-* HTML & CSS
-* Node
-* gulp
-* HTML Email Development
+* Hardware (especially soldering & LEDs)
+* Event Planning
+* Networking (& helping others to connect)
+* Git/Github
+* Slack
+* Jira
+* Pair programming
+* Heroku
+* Ruby on Rails
+* React.js
+* Node.js
+* HTML5 & CSS3
+* Swift & Xcode
+* Test Driven Development (TDD)
 * Leadership
 * Interpersonal Communication
-* Event Planning 
-* Education
+* Education (giving talks & helping at workshops)
 
 Experience
 ----
+(Just a few things I've done)
 
-1. Currently Tech Ladies Phoenix City Organizer & ACT-W National Confrence Co-coordinator
-2. Oranganized over 20 events and classes as a Girl Develop It Chapter Leader
-3. Supervisory Ranger for the Mountains Conservation and Recreation Area and Tongass National Forest
-4. Assisted in creating automation for tasks using Node and Gulp
-5. Given 100+ public talks on natural and cultural history
+* Currently Tech Ladies Seattle City Organizer
+* Organized 30+ events & classes as a Girl Develop It Chapter Leader & Tech Ladies Phoenix City Organizer
+* Supervisory Ranger for Mountains Conservation and Recreation Area & Tongass National Forest
+* Given 100+ public talks on natural and cultural history, a few talks on Git, & a fews talks about Women in Tech
 
 Connect
 ----
@@ -244,11 +254,11 @@ Connect
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  
+
   html {
     min-height: 100vh;
   }
-  
+
   * {
     -webkit-transition: all .3s;
     transition: all .3s;
