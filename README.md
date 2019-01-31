@@ -7,7 +7,7 @@
 
 
 ## System Requirements
-**Node**  -  `>= v4.0` 
+**Node**  -  `>= v4.0`
 
 ## Instructions
 
@@ -34,4 +34,6 @@ If local dev ```localhost:8080``` does not run in Chrome, try Firefox or another
     ```
 
 3. Open GitHub Pages Features
+    https://yourUserName.github.io/animated-resume/dist/
 
+    for example (https://oh-kpond.github.io/animated-resume/dist/)
