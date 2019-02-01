@@ -1,12 +1,12 @@
-let utils = require('./utils')
-let webpack = require('webpack')
-let config = require('../config')
-let merge = require('webpack-merge')
-let baseWebpackConfig = require('./webpack.base.conf')
-let HtmlWebpackPlugin = require('html-webpack-plugin')
-let ExtractTextPlugin = require('extract-text-webpack-plugin')
+const utils = require('./utils')
+const webpack = require('webpack')
+const config = require('../config')
+const merge = require('webpack-merge')
+const baseWebpackConfig = require('./webpack.base.conf')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-let env = config.build.env
+const env = config.build.env
 
 let webpackConfig = merge(baseWebpackConfig, {
   module: {
