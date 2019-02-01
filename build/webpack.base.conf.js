@@ -30,6 +30,7 @@ module.exports = {
       'components': resolve('src/components')
     }
   },
+  mode: 'none',
   module: {
     rules: [
       {
