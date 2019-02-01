@@ -7,7 +7,7 @@
 
 
 ## System Requirements
-**Node**  -  `>= v4.0`
+**Node**  -  `>= v6.0`
 
 ## Instructions
 
