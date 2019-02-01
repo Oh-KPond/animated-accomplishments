@@ -145,7 +145,7 @@ Skills
 * Git/Github
 * Slack
 * Jira
-* Pair programming
+* Pair Programming
 * Heroku
 * Ruby on Rails
 * React.js
