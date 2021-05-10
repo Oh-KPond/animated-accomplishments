@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <StyleEditor ref="styleEditor" :code="currentStyle"></StyleEditor>
-    <ResumeEditor ref="resumeEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ResumeEditor>
+    <ListEditor ref="listEditor" :markdown="currentMarkdown" :enableHtml="enableHtml"></ListEditor>
   </div>
 </template>
 
 <script>
   import StyleEditor from './components/StyleEditor'
-  import ResumeEditor from './components/ResumeEditor'
+  import ListEditor from './components/ListEditor'
   import './assets/reset.css'
 
   export default {
     name: 'app',
     components: {
       StyleEditor,
-      ResumeEditor
+      ListEditor
     },
     data() {
       return {
@@ -23,29 +23,34 @@
         enableHtml: false,
         fullStyle: [
           `/*
-* Inspired by http://strml.net/ & https://github.com/jirengu-inc/animating-resume
 *
-* Hello there! My name is Kate. It's a pleasure to e-meet you!
-* Today I'd like to build my resume for you.
-* If you ask me why, then I'd have to tell you...
-* I think it's fun!
+* Hello there! I made this!
+* Today I'd like to build my list of accomplishments for you.
+* This is currently for my work between November of 2019 and May 2021.
+*
+* Just in case you don't want to watch this build, the list is provided here:
+- Project Folders - built & implemented
+- Red Cap - built, implimented, & admistered
+- LIMS Integration - modified & maintaining
+- Account Management Data Service - built, implemented, & maintaining
+- Ledger & AMDS Mocks - created & maintaining
+- Mongo & MySQL - modified & maintaining
+- Lab Results - implimentation & maintaining
+- Partnerships - maintaining good working relationships with partners & SLIMS staff
+- Testing - implmented & ongoing maintaining
 */
 
-/* First we'll need to add a transition effect to all the elements */
-* {
+
+{
   -webkit-transition: all .3s;
   transition: all .3s;
 }
-/* Then I don't know about you, but
-* I find the white background a bit boring. Let's change that, shall we? */
+
 html {
   color: #ececec;
   background: #4b2650;
 }
-/* Now we'll need a bit of padding to move the text from the edge of the screen
-* And wouldn't a border be nice,
-* with some margin to keep the text from the edge of the border.
-*/
+
 .styleEditor {
   padding: .5em;
   border: 1px solid;
@@ -53,22 +58,16 @@ html {
   overflow: auto;
   width: 50vw; height: 90vh;
 }
-/* I think it would be nice to have the code highlighted as well */
-.token.selector { color: #ef41fe; }
+
 .token.property { color: #f1a9a0; }
 .token.punctuation { color: #dda0dd; }
 .token.function { color: #fffacd; }
 
-/* Those colors were pickout using colorsafe.co
-* "Accessible text colors are generated with
-* WCAG Guidelines recommend contrast ratio"
-*
-* How about a little perspective now? */
 html {
   -webkit-perspective: 1000px;
           perspective: 1000px;
 }
-/* Here's some fun with that perspective.  */
+
 .styleEditor {
   position: fixed; left: 10px; top: 0;
   -webkit-transition: none;
@@ -77,8 +76,7 @@ html {
           transform: rotateY(10deg) translateZ(-100px) ;
 }
 
-/* Now to make the space for my resume... */
-.resumeEditor {
+.listEditor {
   position: fixed; right: 0; top: 0;
   padding: .5em;  margin: .5em;
   width: 48vw; height: 90vh;
@@ -86,43 +84,43 @@ html {
   background: white; color: #222;
   overflow: auto;
 }
-/* And actually write it! */
+/* This animated list was Inspired by http://strml.net/ & https://github.com/jirengu-inc/animating-resume
+*/
 
 
 `,
           `
-/* This Markdown needs some style now.
- * We'll accomplish this with some open source tools like
+/* Now for some markdown style.
  * marked(https://www.npmjs.com/package/marked).
  */
 `
           ,
           `
 /* Here comes the styling... */
-.resumeEditor{
+.listEditor{
   padding: 2em;
 }
-.resumeEditor h2 {
+.listEditor h2 {
   display: inline-block;
   border-bottom: 1px solid;
   margin: 1em 0 .5em;
 }
-.resumeEditor ul,.resumeEditor ol {
+.listEditor ul,.listEditor ol {
   list-style: none;
 }
-.resumeEditor ul> li::before{
+.listEditor ul> li::before{
   content: '•';
   margin-right: .5em;
 }
-.resumeEditor ol {
+.listEditor ol {
   counter-reset: section;
 }
-.resumeEditor ol li::before {
+.listEditor ol li::before {
   counter-increment: section;
   content: counters(section, ".") " ";
   margin-right: .5em;
 }
-.resumeEditor blockquote {
+.listEditor blockquote {
   margin: 1em;
   padding: .5em;
   background: #ddd;
@@ -130,62 +128,34 @@ html {
 `],
         currentMarkdown: '',
         fullMarkdown: `
-Kate Pond
+Kate Pond's Work 11/19 - 05/21
 ----
 
-Genius, Unicorn, Goddess, Gatekeeper of Unlimited Knowledge, Leader
+I've created this in order to serve as a reminder of all the good work I've been doing.
 
-Skills
+Highlights
 ----
-(Some of the things I love in no particular order)
-
-* Hardware (especially soldering & LEDs)
-* Event Planning
-* Networking (& helping others to connect)
-* Git/Github
-* Slack
-* Jira
-* Pair Programming
-* Heroku
-* Ruby on Rails
-* React.js
-* Node.js
-* HTML5 & CSS3
-* Swift & Xcode
-* Test Driven Development (TDD)
-* Leadership
-* Interpersonal Communication
-* Education (giving talks & helping at workshops)
-
-Experience
-----
-(Just a few things I've done)
-
-* Currently Tech Ladies Seattle City Organizer
-* Organized 30+ events & classes as a Girl Develop It Chapter Leader & Tech Ladies Phoenix City Organizer
-* Supervisory Ranger for Mountains Conservation and Recreation Area & Tongass National Forest
-* Given 100+ public talks on natural and cultural history, a few talks on Git, & a fews talks about Women in Tech
-
-Connect
-----
-
-* [GitHub](https://github.com/Oh-KPond)
-* [Medium](https://medium.com/@OhKPond)
-* [Twitter @OhKPond](https://twitter.com/OhKPond)
-
-> To build your own animated resume，Fork [This Project](https://github.com/Oh-KPond/animated-resume)，and make it your own！
+- Project Folders - built & implemented
+- Red Cap - built, implimented, & admistered
+- LIMS Integration - modified & maintaining
+- Account Management Data Service - built, implemented, & maintaining
+- Ledger & AMDS Mocks - created & maintaining
+- Mongo & MySQL - modified & maintaining
+- Lab Results - implimentation & maintaining
+- Partnerships - maintaining good working relationships with partners & SLIMS staff
+- Testing - implmented & ongoing maintaining
 
 `
       }
     },
     created() {
-      this.makeResume()
+      this.makeList()
     },
 
     methods: {
-      makeResume: async function () {
+      makeList: async function () {
         await this.progressivelyShowStyle(0)
-        await this.progressivelyShowResume()
+        await this.progressivelyShowList()
         await this.progressivelyShowStyle(1)
         await this.showHtml()
         await this.progressivelyShowStyle(2)
@@ -222,25 +192,25 @@ Connect
           showStyle()
         })
       },
-      progressivelyShowResume() {
+      progressivelyShowList() {
         return new Promise((resolve, reject) => {
           let length = this.fullMarkdown.length
           let interval = this.interval
-          let showResume = () => {
+          let showList = () => {
             if (this.currentMarkdown.length < length) {
               this.currentMarkdown = this.fullMarkdown.substring(0, this.currentMarkdown.length + 1)
               let lastChar = this.currentMarkdown[this.currentMarkdown.length - 1]
               let prevChar = this.currentMarkdown[this.currentMarkdown.length - 2]
               console.log(prevChar)
-              if (prevChar === '\n' && this.$refs.resumeEditor) {
-                this.$nextTick(() => this.$refs.resumeEditor.goBottom())
+              if (prevChar === '\n' && this.$refs.listEditor) {
+                this.$nextTick(() => this.$refs.listEditor.goBottom())
               }
-              setTimeout(showResume, interval)
+              setTimeout(showList, interval)
             } else {
               resolve()
             }
           }
-          showResume()
+          showList()
         })
       }
     }

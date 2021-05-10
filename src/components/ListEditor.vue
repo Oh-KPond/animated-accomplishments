@@ -1,5 +1,5 @@
 <template>
-  <div class="resumeEditor" :class="{htmlMode:enableHtml}" ref="container">
+  <div class="listEditor" :class="{htmlMode:enableHtml}" ref="container">
     <div v-if="enableHtml" v-html="result"></div>
     <pre v-else>{{result}}</pre>
   </div>
@@ -9,7 +9,7 @@
   import marked from 'marked'
   export default {
     props: ['markdown', 'enableHtml'],
-    name: 'ResumeEditor',
+    name: 'ListEditor',
     computed: {
       result: function () {
         return this.enableHtml ? marked(this.markdown) : this.markdown
